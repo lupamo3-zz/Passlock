@@ -17,5 +17,17 @@ class TestLogin(unittest.TestCase):
         '''
         test_init test case to test if object is initialized properly
         '''
-        
+        self.assertEqual(self.new_newpasslock.username, "skankhunt42")
+        self.assertEqual(self.new_newpasslock.email, "picklerick@gmail.com")
+        self.assertEqual(self.new_newpasslock.password, "123456")
 
+    def test_save_newpasslock(self):
+        '''
+        test_save_passlock test case to test if the password object is saved into the login list
+        '''
+        self.new_newpasslock.save_newpasslock() #saving the new password 
+        self.assertEqual(len(Login.login_list),1)
+
+
+if __name__ == '__main__':
+    unittest.main()
