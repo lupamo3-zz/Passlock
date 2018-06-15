@@ -28,6 +28,12 @@ class TestLogin(unittest.TestCase):
         self.new_newpasslock.save_newpasslock() #saving the new password 
         self.assertEqual(len(Login.login_list),1)
 
+    def tearDown(self):
+        '''
+        cleans up after each test has run
+        '''
+        Login.login_list=[]
+
 
 if __name__ == '__main__':
     unittest.main()
