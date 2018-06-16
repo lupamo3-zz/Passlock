@@ -77,5 +77,37 @@ class Pword(unittest.TestCase):
         self.new_data.add_password()
         self.assertEqual(len(Pword.pword_list),1)
 
+    def test_display_data(self):
+        '''
+        Testing if the data can be displayed.
+        '''
+        self.new_data.add_password()
+        test_data = Pword(1,1,"jumia.com")
+        test_data.add_password()
+
+        data_found = Pword.display_data(1,1)
+        self.assertEqual(data_found.website,test_data.website)
+    
+    def test_data_exists(self):
+        '''
+        Testing to check if the function for checking data works well
+        '''
+        self.new_data.add_password()
+        test_data = Pword(1,1,"jumia.com")
+        test_data.add_password()
+
+        data_exists = Pword.existing_data(1)
+        self.assertTrue(data_exists)
+    
+    def test_copy_password(self):
+        '''
+        Testing if the copy password function works
+        '''
+        self.new_data.add_password()
+        Pword.copy_password(1,1)
+
+        self.assertEqual(self.new_data.webkey,pyperclip.paste())
+
+
 if __name__ == '__main__':
     unittest.main()
