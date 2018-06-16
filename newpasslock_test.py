@@ -42,8 +42,19 @@ class TestLogin(unittest.TestCase):
         test_account=Login("skank", "picklerick", "password")
         test_account.usercreation()
 
-        found_user=Login.loginverify("skank", "picklerick")
+        found_user=Login.loginverify("picklerick", "password")
         self.assertEqual(found_user.username, test_account.username)
+
+
+class Pword(unittest.TestCase):
+    '''
+    Test class that defines testcases for creating login details
+    '''
+    def setUp(self):
+        '''
+        Setting up the structure before each test
+        '''
+        self.new_data=Pword()
 
 
 if __name__ == '__main__':

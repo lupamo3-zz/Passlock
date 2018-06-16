@@ -36,13 +36,13 @@ class Pword:
     """
     pword_list=[] #Empty pword list
 
-    def __init__(self, userid, website, password):
+    def __init__(self, userid, website, webkey):
         '''
         __init__ method helps us to store user details
         '''
         self.userid=userid
         self.website=website
-        self.password=password
+        self.webkey=webkey
 
     def addpassword (self):
         """
