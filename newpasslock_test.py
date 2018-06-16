@@ -1,5 +1,5 @@
 import unittest,pyperclip #Importing the unittest module
-from newpasslock import Login #Import the login class
+from newpasslock import Login, Pword #Import the login class
 
 class TestLogin(unittest.TestCase):
     '''
@@ -46,7 +46,7 @@ class TestLogin(unittest.TestCase):
         self.assertEqual(found_user.username, test_account.username)
 
 
-class Pword(unittest.TestCase):
+class TestPwords(unittest.TestCase):
     '''
     Test class that defines testcases for creating login details
     '''
@@ -68,7 +68,7 @@ class Pword(unittest.TestCase):
         '''
         self.assertEqual(self.new_data.userid, 1)
         self.assertEqual(self.new_data.webkey, 1)
-        self.assertEqual(self.new_data.website "jumia.com")
+        self.assertEqual(self.new_data.website, "jumia.com")
 
     def test_add_password(self):
         '''
