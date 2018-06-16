@@ -1,5 +1,5 @@
 import unittest,pyperclip #Importing the unittest module
-from newpasslock import Login, Pword #Import the login class
+from newpasslock import Login, Pword #Import the login and Pword class
 
 class TestLogin(unittest.TestCase):
     '''
