@@ -34,6 +34,16 @@ class TestLogin(unittest.TestCase):
         '''
         Login.login_list=[]
 
+    def test_verify(self):
+        '''
+        Testing to see if it can sign in a user
+        '''
+        self.new_newpasslock.save_newpasslock()
+        test_account=Login("skank", "picklerick", "password")
+        test_account.save_newpasslock()
+
+        found_user
+
 
 if __name__ == '__main__':
     unittest.main()
