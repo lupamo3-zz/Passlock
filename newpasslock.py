@@ -19,6 +19,17 @@ class Login:
         '''
         Login.login_list.append(self)
 
+    @classmethod
+    def loginverify(cls, name, key):
+        '''
+        Authenticates login details,
+        '''
+        for user in cls.login_list:
+            if user.username==name and user.password==key:
+                #print(user.identify)
+                return user
+        return 0
+
 class Pword:
     """
     Class that stores password and user ids

@@ -42,8 +42,6 @@ class TestLogin(unittest.TestCase):
         test_account=Login("skank", "picklerick", "password")
         test_account.save_newpasslock()
 
-        found_user
-
 
 if __name__ == '__main__':
     unittest.main()
