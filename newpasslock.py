@@ -13,9 +13,9 @@ class Login:
         self.email=email
         self.password=password
 
-    def save_newpasslock(self):
+    def usercreation(self):
         '''
-        save_newpasslock method saves newpasslock objects into newpasslock_method
+        usercreation method saves usercreation objects into usercreation_method
         '''
         Login.login_list.append(self)
 
@@ -26,7 +26,7 @@ class Login:
         '''
         for user in cls.login_list:
             if user.email==name and user.password==key:
-                #print(user.identify)
+                #print(user.username)
                 return user
         return 0
 

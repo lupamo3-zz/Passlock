@@ -11,21 +11,21 @@ class TestLogin(unittest.TestCase):
         '''
         Setup method to run each test cases.
         '''
-        self.new_newpasslock=Login("skankhunt42", "picklerick@gmail.com", "123456") #create login object
+        self.new_user=Login("skankhunt42", "picklerick@gmail.com", "123456") #create login object
 
     def test_init(self):
         '''
         test_init test case to test if object is initialized properly
         '''
-        self.assertEqual(self.new_newpasslock.username, "skankhunt42")
-        self.assertEqual(self.new_newpasslock.email, "picklerick@gmail.com")
-        self.assertEqual(self.new_newpasslock.password, "123456")
+        self.assertEqual(self.new_user.username, "skankhunt42")
+        self.assertEqual(self.new_user.email, "picklerick@gmail.com")
+        self.assertEqual(self.new_user.password, "123456")
 
-    def test_save_newpasslock(self):
+    def test_usercreation(self):
         '''
         test_save_passlock test case to test if the password object is saved into the login list
         '''
-        self.new_newpasslock.save_newpasslock() #saving the new password 
+        self.new_user.usercreation() #saving the new password 
         self.assertEqual(len(Login.login_list),1)
 
     def tearDown(self):
@@ -38,12 +38,12 @@ class TestLogin(unittest.TestCase):
         '''
         Testing to see if it can sign in a user
         '''
-        self.new_newpasslock.save_newpasslock()
+        self.new_user.usercreation()
         test_account=Login("skank", "picklerick", "password")
-        test_account.save_newpasslock()
+        test_account.usercreation()
 
         found_user=Login.loginverify("skank", "picklerick")
-        self.assertEqual(found_user.identify, test_account.identify)
+        self.assertEqual(found_user.username, test_account.username)
 
 
 if __name__ == '__main__':
