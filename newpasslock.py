@@ -70,3 +70,7 @@ class Pword:
                 return True
         return False
 
+    @classmethod
+    def copy_password(cls, number, count)
+        found_password=Pword.display_data(number, count)
+        pyperclip.copy(found_password.webkey)
