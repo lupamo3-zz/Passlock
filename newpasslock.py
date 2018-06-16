@@ -1,3 +1,4 @@
+import pyperclip
 class Login:
     """
     Class that generates username, email and password
@@ -35,16 +36,15 @@ class Pword:
     Class that stores password and user ids
     """
     pword_list=[] #Empty pword list
-
-    def __init__(self, userid, website, webkey):
+    def __init__(self, userid, webkey, website):
         '''
         __init__ method helps us to store user details
         '''
         self.userid=userid
-        self.website=website
         self.webkey=webkey
+        self.website=website
 
-    def addpassword (self):
+    def add_password (self):
         """
         creating a method that creates username and password
         """
