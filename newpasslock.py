@@ -25,7 +25,7 @@ class Login:
         Authenticates login details,
         '''
         for user in cls.login_list:
-            if user.username==name and user.password==key:
+            if user.email==name and user.password==key:
                 #print(user.identify)
                 return user
         return 0

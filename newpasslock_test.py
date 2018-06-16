@@ -1,4 +1,4 @@
-import unittest #Importing the unittest module
+import unittest,pyperclip #Importing the unittest module
 from newpasslock import Login #Import the login class
 
 class TestLogin(unittest.TestCase):
@@ -41,6 +41,9 @@ class TestLogin(unittest.TestCase):
         self.new_newpasslock.save_newpasslock()
         test_account=Login("skank", "picklerick", "password")
         test_account.save_newpasslock()
+
+        found_user=Login.loginverify("skank", "picklerick")
+        self.assertEqual(found_user.identify, test_account.identify)
 
 
 if __name__ == '__main__':
