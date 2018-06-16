@@ -54,8 +54,28 @@ class Pword(unittest.TestCase):
         '''
         Setting up the structure before each test
         '''
-        self.new_data=Pword()
+        self.new_data=Pword(1, "jumia.com", 1)
 
+    def tearDown(self):
+        '''
+        Cleans up the test after test is complete
+        '''
+        Pword.pword_list=[]
+
+    def test_init(self):
+        '''
+        Test case to evaluate if the case has been initialized properly
+        '''
+        self.assertEqual(self.new_data.userid, 1)
+        self.assertEqual(self.new_data.webkey, 1)
+        self.assertEqual(self.new_data.website "jumia.com")
+
+    def test_add_password(self):
+        '''
+        Testing if the new website and password can be saved
+        '''
+        self.new_data.add_password()
+        self.assertEqual(len(Pword.pword_list),1)
 
 if __name__ == '__main__':
     unittest.main()
