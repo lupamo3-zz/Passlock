@@ -90,7 +90,7 @@ def main():
             entries.append(0)
             print("-"*27)
 
-        elif welcome_text == "ss".lower():
+        elif welcome_text == "li".lower():
             print("Enter username and password to continue:")
             print("-"*40)
             my_login = input("Username: ")
@@ -169,7 +169,7 @@ def main():
                         print("Invalid entry. Enter command again")
                         print("\n"+"-"*40)
 
-        elif welcome_text == "ex":
+        elif welcome_text == "lu":
             print("\n")
             print(f"Goodbye!!")
             print("-"*30)
