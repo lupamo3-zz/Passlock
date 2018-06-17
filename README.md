@@ -39,6 +39,12 @@ You then have options to select from:
    Select nu if you're a new user
    Li if you want to login and are exisiting user
    Lu to exit.
+  
+  ### Support and contact details.
+  Contact me via email lupamo93@gmail.com.
+  
+  ## License
+  MIT 2018, Norbert Anjichi
    
    
 
