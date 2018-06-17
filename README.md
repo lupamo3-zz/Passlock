@@ -29,6 +29,24 @@ No known bugs, kindly drop a message at lupamo93@gmail.com incase of any.
 #### * Demo
 * Run (chmod +x run.py) on the terminal.
 * Now run ./run.py , since the project is now executable.
+You will receive a welcome message.
+"How are you? Welcome to you password locker app"
+You then have options to select from:
+            nu to create new account
+            li to log in
+            lu to exit
+            
+   Select nu if you're a new user
+   Li if you want to login and are exisiting user
+   Lu to exit.
+   
+   
+
+
+
+
+
+
 
 
 
