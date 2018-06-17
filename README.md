@@ -16,15 +16,23 @@ We use shortened codes to implement this commands.
 * Python3.6
 
 #### Known Bugs
-No none bugs, kindly drop a message at lupamo93@gmail.com incase of any.
+No known bugs, kindly drop a message at lupamo93@gmail.com incase of any.
 
 ### Instruction on running tests.
 
 #### * Set-up and Installation
 -Install python 3.6.
-- Clone the repository into your terminal
+- Clone the repository into your terminal.
 - Navigate to the directory of the clone.
-- Run "python3.6 run.py"
+- Run "python3.6 run.py".
+
+#### * Demo
+* Run (chmod +x run.py) on the terminal.
+* Now run ./run.py , since the project is now executable.
+
+
+
+
 
 
 
