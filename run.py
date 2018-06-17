@@ -18,13 +18,13 @@ def verify(username, passkey):
     '''
     Function that verifies and enables login
     '''
-    return Login.verify(username, passkey)
+    return Login.loginverify(username, passkey)
 
 def my_new_data(userid, webkey, website):
     '''
     This is a function that creates data for storing password
     '''
-    new_data=Login(userid, webkey, website):
+    new_data=Login(userid, webkey, website)
     return new_data
 
 def add_data(data):
@@ -33,7 +33,6 @@ def add_data(data):
     '''
     data.add_password()
 
-use 
 def dispay_data(data, number):
     '''
     This is a function that displays the user data
@@ -78,28 +77,28 @@ def main():
         print("Insert:\n nu to create new account\n li to log in\n lu to exit")
         welcome_text=input().lower().strip()
         if welcome_text=="nu":
-            print("Create account to continue:"+"\n"+"_"*25+"\n Enter Username:")
-            my_username=input("New Username")
+            print("Create account to continue:"+"\n"+"_"*25+"\n Enter Email:  ")
+            my_email=input("New Email")
             print("Enter password: ")
             my_password=input("New Password: ")
 
             print("\n")
-            create_user(new_account(my_id,my_username,my_password))
-            my_id+=1
-            print(f"User {my_username} has been created.\nLogin to continue")
+            usercreation(new_account(my_username,my_email,my_password))
+            my_username+=1
+            print(f"User {my_email} has been created.\nLogin to continue")
             entries.append(0)
-            print("-"*27)
+            print("-"*10)
 
         elif welcome_text == "li".lower():
-            print("Enter username and password to continue:")
-            print("-"*40)
-            my_login = input("Username: ")
+            print("Enter email and password to continue:")
+            print("-"*10)
+            my_login = input("Email: ")
             my_key = input("Password: ")
-            get_result = authenticate(my_login,my_key)
+            get_result = verify(my_login,my_key)
             if get_result == 0:
                 print("\n")
-                print("Invalid username and/or password")
-                print("-"*27)
+                print("Invalid Email and/or password")
+                print("-"*10)
             elif get_result!=0:
                 # print(f"{get_result.identify} has logged in")
                 print("\n")
@@ -123,7 +122,7 @@ def main():
                         print("\n")
                         print(f"***Your password for {my_website} is {my_webkey}***")
                         # print(f"This is the {entries[my_ident]} entry")MKBViStksX 0h5SzxJxQe fOTSiyEZuQ
-                        print("-"*45)
+                        print("-"*10)
 
                     elif get_input == "vp":
                         if data_existing(get_result.identify):
@@ -136,10 +135,10 @@ def main():
                                 print(f"{data_my+1}. {get_password.website} ---- {get_password.web_key}")
                                 data_my+=1
                             print("\nEnter a command to continue")
-                            print("-"*20)
+                            print("-"*10)
                         else:
                             print("\nYou have no data.\nType ad to generate some passwords")
-                            print("-"*20)
+                            print("-"*10)
 
                     elif get_input == "cp":
                         if data_existing(get_result.identify):
@@ -149,35 +148,35 @@ def main():
                                 print("\n")
                                 print(f"{get_index+1} is invalid. Enter the correct index of password to copy")
                                 print("Type vp to confirm the correct index of password to copy")
-                                print("-"*30)
+                                print("-"*10)
                             elif get_index < entries[get_result.identify]:
                                 copy_password(get_result.identify,get_index)
                                 print("\n")
                                 print(f"Password {get_index+1} on the list has been copied, and is ready for pasting")
-                                print("-"*30)
+                                print("-"*10)
                         else:
                             print("\nYou have no data.\nType ad to add some passwords")
-                            print("-"*20)
+                            print("-"*10)
 
                     elif get_input == "lo":
                         print("\n")
                         print(f"Goodbye {get_result.user_name}!")
-                        print("-"*30)
+                        print("-"*10)
                         break
                     
                     else:
                         print("Invalid entry. Enter command again")
-                        print("\n"+"-"*40)
+                        print("\n"+"-"*10)
 
         elif welcome_text == "lu":
             print("\n")
             print(f"Goodbye!!")
-            print("-"*30)
+            print("-"*10)
             break
 
         else:
             print("Invalid entry. Enter command again")
-            print("\n"+"-"*40)
+            print("\n"+"-"*10)
 
 
 if __name__ == '__main__':
